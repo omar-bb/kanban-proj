@@ -196,7 +196,23 @@
                 // mais renderBoard est plus sûr pour la cohérence.
                 renderBoard(boardData);
             }
-        });
+        }
+
+        // --- Fonction de Rendu Principal ---
+
+        function renderBoard(data) {
+            const container = document.querySelector(".container");
+            container.innerHTML = "";
+
+            // Boucle sur les colonnes selon l'ordre défini
+            data.columnOrder.forEach((colId) => {
+                const colData = data.table[colId];
+                if (!colData) return;
+
+                const column = document.createElement("div");
+                column.className = "task-column";
+                column.draggable = true; // Rend la colonne déplaçable
+                column.dataset.id = colId;
 
         document.addEventListener("dragover", (ev) => {
             const row = ev.target.closest(".row");
