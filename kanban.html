@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>KanBanProj</title>
     <style>
         * {
             box-sizing: border-box;
@@ -56,104 +56,11 @@
     </style>
 </head>
 <body>
-    <!-- <p id="p1" draggable="true">This element is draggable.</p> 
-    <p id="target">Drop Zone</p> -->
-    <div class="row">
-        <div class="column">
-            <div class="card" draggable="true">
-                <p>Card</p>
-            </div> 
-        </div>
-        <div class="column">
-            <div class="card" draggable="true">
-                <p>Card 2</p>
-            </div> 
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="column">
-            <div class="card" draggable="true">
-                <p>Card 3</p>
-            </div> 
-        </div>
-        <div class="column">
-            <div class="card" draggable="true">
-                <p>Card 4</p>
-            </div> 
-        </div>
+    <div class="container">
+        <!-- Le contenue de la board ici ! -->
     </div>
 
     <script>
-        // function initBoard() {
-        //     if (!localStorage.getItem("myBoard")) {
-        //         const data = {
-        //             cards: {},
-        //             tables: {}
-        //         };
-        //         localStorage.setItem("myBoard", JSON.stringify(data));
-        //         localStorage.setItem("lastCardId", "0");
-        //         localStorage.setItem("lastTableId", "0");
-        //     }
-        // }
-
-        // function createCard(task, due) {
-        //     const board = JSON.parse(localStorage.getItem("myBoard"));
-        //     let lastCardId = parseInt(localStorage.getItem("lastCardId"));
-
-        //     const newId = lastCardId + 1;
-
-        //     board.cards[newId] = {
-        //         task: task,
-        //         due: due
-        //     }
-
-        //     localStorage.setItem("myBoard", JSON.stringify(board));
-        //     localStorage.setItem("lastCardId", newId);
-
-        //     return newId;
-        // }
-
-        // const data = {
-        //     cards: {
-        //         "0": {
-        //             task: "lire le cours d'HTML",
-        //             due: "2025-11-20"
-        //         },
-        //         "1": {
-        //             task: "faire les exercices CSS",
-        //             due: "2025-11-22"
-        //         },
-        //         "2": {
-        //             task: "réviser JavaScript (DOM)",
-        //             due: "2025-11-25"
-        //         },
-        //         "3": {
-        //             task: "créer un mini-projet HTML/CSS",
-        //             due: "2025-11-28"
-        //         }
-        //     },
-        //     tables: {
-        //         "0": {
-        //             name: "TO-DO",
-        //             cards: ["0", "1"]
-        //         },
-        //         "1": {
-        //             name: "IN-PROGRESS",
-        //             cards: ["2"]
-        //         },
-        //         "2": {
-        //             name: "DONE",
-        //             cards: ["3"]
-        //         }
-        //     }
-        // };
-
-        // const json = JSON.stringify(data);
-
-        // localStorage.setItem("myBoard", json);
-
-
         class Card {
             constructor(elementId, text) {
                 this.element = document.getElementById(elementId);
