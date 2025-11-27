@@ -423,16 +423,11 @@
                     break;
                 }
             }
-        });
 
-        document.addEventListener("drop", (ev) => {
-            const row = ev.target.closest(".row");
-            if (row) {
-                ev.preventDefault();
-                row.classList.remove("placeholder"); // remove grey
-                row.append(draggedEl.parentNode);    // move card
+            if (!inserted) {
+                if (existingPlaceholder) existingPlaceholder.remove();
+                tasks.appendChild(existingPlaceholder ?? makePlaceholder(draggedTask));
             }
-        });
     </script>
 </body>
 </html>
