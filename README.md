@@ -1,4 +1,4 @@
-# Projet Trello Clone (Kanban Board)
+# Projet Kanban 
 
 ## Description du projet
 Ce projet est une application web de gestion de tâches inspirée de Trello, utilisant la méthode Kanban. Elle permet aux utilisateurs d'organiser leurs tâches dans différentes colonnes (listes), de les déplacer par glisser-déposer, et de personnaliser leur tableau de bord. L'objectif était de créer une application interactive et persistante sans utiliser de frameworks lourds, en se concentrant sur les API natives du navigateur.
